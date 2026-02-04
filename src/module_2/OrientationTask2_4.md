@@ -15,10 +15,10 @@ Event List:
 
 Results:
 
-| Work complete | Counter |
-|---------------|---------|
-| X             | 2       |
-| Y             | 0       |
+| Client type | Work complete |
+|-------------|---------|
+| X           | 2       |
+| Y           | 0       |
 ___
 ### Clock 18 (Event B5)
 | Phase | Router Queue | Router | Oper 1 queue | Oper 1 | Oper 2 queue | Oper 2 |
@@ -36,7 +36,7 @@ Event List:
 
 Results:
 
-| Work complete | Counter |
-|---------------|---------|
-| X             | 2       |
-| Y             | 1       |
+| Client type | Work complete |
+|-------------|---------------|
+| X           | 2             |
+| Y           | 1             |
