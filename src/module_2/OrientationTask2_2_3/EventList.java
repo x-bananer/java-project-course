@@ -14,8 +14,24 @@ public class EventList {
        eventQueue.add(event2);
        eventQueue.add(event3);
 
-       while (eventQueue.size() > 0) {
-           System.out.println(eventQueue.remove().toString());
-       }
+       System.out.println("\nEvents:");
+       printQueue(eventQueue);
+
+       Event removed = eventQueue.poll();
+       System.out.println("\nRemoved event:\n" + removed);
+
+       System.out.println("\nRemaining events:");
+       printQueue(eventQueue);
    }
+
+    private static void printQueue(PriorityQueue<Event> queue) {
+        /* We print from a copy of the PriorityQueue because polling removes elements.
+         * If we printed directly from eventQueue, it would be emptied.
+         */
+        PriorityQueue<Event> copyQueue = new PriorityQueue<>(queue);
+
+        while (!copyQueue.isEmpty()) {
+            System.out.println(copyQueue.poll());
+        }
+    }
 }
