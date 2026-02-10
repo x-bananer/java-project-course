@@ -113,7 +113,7 @@ Nämä ovat tapahtumia, jotka on jo suunniteltu tietylle ajalle. Esimerkiksi asi
 
 **C-events**
 
-Nämä ovat ehdollisia toimintoja. Ne tehdään vain, jos tilanne on sopiva. Esimerkiksi jos jonossa on asiakas ja palvelupiste on vapaa, palvelu voi alkaa ja C-tapahtuma suoritetaan. Jos ehto ei täyty, mitään ei tapahdu.
+Nämä ovat ehdollisia tapahtumia. Ne tehdään vain, jos tilanne on sopiva. Esimerkiksi jos jonossa on asiakas ja palvelupiste on vapaa, palvelu voi alkaa ja C-tapahtuma suoritetaan. Jos ehto ei täyty, mitään ei tapahdu.
 
 Example:
 ```
