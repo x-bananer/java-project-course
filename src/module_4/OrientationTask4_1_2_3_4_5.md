@@ -30,7 +30,7 @@ N = W/T on keskimääräinen asiakkaiden määrä järjestelmässä.
 Se kertoo, kuinka monta asiakasta on keskimäärin pankissa samaan aikaan, sekä jonossa että palvelupisteessä.
 ___
 
-2. (W) Consider the categories in which performance measures are maintained/updated/computed. (Think in general terms: service point/customer; not in target system terms.)
+**2. (W) Consider the categories in which performance measures are maintained/updated/computed. (Think in general terms: service point/customer; not in target system terms.)**
 
 Ensimmäinen ryhmä on palvelupisteen mittarit.
 On loogista laskea ne palvelupisteessä, koska ne kuvaavat sitä, miten palvelupiste toimii.
@@ -52,16 +52,16 @@ On loogista laskea ne jokaiselle asiakkaalle, koska ne kuvaavat asiakkaan kokema
 Nämä päivitetään, kun asiakas saapuu järjestelmään tai poistuu järjestelmästä.
 ___
 
-3. (W) Design two different systems of three or four service points for a real-world destination. Use real-world concepts. Draw diagrams using the graphical representation of a service point shown in section ´Performance Variables´.
+**3. (W) Design two different systems of three or four service points for a real-world destination. Use real-world concepts. Draw diagrams using the graphical representation of a service point shown in section ´Performance Variables´.**
 
 ![Diagram](diagram.png)
 ___
 
-4. (W) Write an algorithm in Java or pseudocode for the main loop of the simulator:
+**4. (W) Write an algorithm in Java or pseudocode for the main loop of the simulator:
 
 The main loop does all the things required for a three-phase simulation (presented in a section).
 
-Think in general terms (don't think in detail) and present a general solution. No need for target system concepts.
+Think in general terms (don't think in detail) and present a general solution. No need for target system concepts.**
 
 Implementation of an exchange order book model:
 
@@ -103,11 +103,11 @@ in the execution queue:
     remove the order from the system
 ___
 
-5. (W) Using the names of the simulator classes, explain the simulator a) what A-phase coding means? b) what coding B-events mean? c) what coding C events means?
+**5. (W) Using the names of the simulator classes, explain the simulator a) what A-phase coding means? b) what coding B-events mean? c) what coding C events means?
 
 You can also write Java or pseudocode.
 
-Present a general solution. No need for the target system concepts.
+Present a general solution. No need for the target system concepts.**
 
 **A-phase**
 
