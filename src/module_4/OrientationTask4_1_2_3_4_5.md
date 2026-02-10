@@ -63,6 +63,44 @@ The main loop does all the things required for a three-phase simulation (present
 
 Think in general terms (don't think in detail) and present a general solution. No need for target system concepts.
 
+Implementation of an exchange order book model:
+
+when an order arrives in the system:
+    put the order into the arrival queue
+    send the order to the "Validation, classification and sorting service point"
+    
+        if the order type is "market":
+            send the order to the market flow
+    
+        if the order type is "limit":
+            send the order to the limit flow
+
+
+at the same time, in the market flow:
+    take a market order
+    try to find a matching limit order in the order book
+    
+        if a matching limit order is found:
+            execute the trade
+            send both orders to the execution queue
+        else:
+            wait until a matching limit order appears
+
+
+at the same time, in the limit flow:
+    take a limit order
+    add the limit order to the order book
+    wait until a matching order appears
+    
+        when a matching order is found:
+            execute the trade
+            send both orders to the execution queue
+
+
+in the execution queue:
+    take an order
+    wait for execution time
+    remove the order from the system
 ___
 
 5. (W) Using the names of the simulator classes, explain the simulator a) what A-phase coding means? b) what coding B-events mean? c) what coding C events means?
@@ -70,3 +108,33 @@ ___
 You can also write Java or pseudocode.
 
 Present a general solution. No need for the target system concepts.
+
+**A-phase**
+
+The simulator looks at which event will happen next and moves the time directly to that moment.
+
+**B-events**
+
+These are events that are already planned for a specific time. For example, a customer arrives or a service execution finishes. At this stage the simulator just executes everything that must happen at the current time.
+
+**C-events**
+
+These are conditional actions. They are done only if the situation is right. For example, if there is a person in the queue and a free operator, then service can start and the C-event is executed. If the condition is not true, nothing happens.
+
+Example:
+
+while the simulation is not finished:
+    // A-phase
+    take the next event from the event list
+    move the simulation clock to the time of this event
+
+    // B-phase
+    execute all B-events with the current clock time
+    if needed, add new B-events to the event list
+
+    // C-phase
+    while there are C-events whose conditions are true:
+        execute one C-event
+        if needed, add new B-events to the event list
+
+end simulation
