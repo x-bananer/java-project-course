@@ -57,14 +57,11 @@ ___
 ![Diagram](diagram.png)
 ___
 
-**4. (W) Write an algorithm in Java or pseudocode for the main loop of the simulator:
+**4. (W) Write an algorithm in Java or pseudocode for the main loop of the simulator: The main loop does all the things required for a three-phase simulation (presented in a section). Think in general terms (don't think in detail) and present a general solution. No need for target system concepts.**
 
-The main loop does all the things required for a three-phase simulation (presented in a section).
+*Implementation of an exchange order book model:*
 
-Think in general terms (don't think in detail) and present a general solution. No need for target system concepts.**
-
-Implementation of an exchange order book model:
-
+```
 when an order arrives in the system:
     put the order into the arrival queue
     send the order to the "Validation, classification and sorting service point"
@@ -101,13 +98,10 @@ in the execution queue:
     take an order
     wait for execution time
     remove the order from the system
+```
 ___
 
-**5. (W) Using the names of the simulator classes, explain the simulator a) what A-phase coding means? b) what coding B-events mean? c) what coding C events means?
-
-You can also write Java or pseudocode.
-
-Present a general solution. No need for the target system concepts.**
+**5. (W) Using the names of the simulator classes, explain the simulator a) what A-phase coding means? b) what coding B-events mean? c) what coding C events means?  You can also write Java or pseudocode. Present a general solution. No need for the target system concepts.**
 
 **A-phase**
 
@@ -122,7 +116,7 @@ These are events that are already planned for a specific time. For example, a cu
 These are conditional actions. They are done only if the situation is right. For example, if there is a person in the queue and a free operator, then service can start and the C-event is executed. If the condition is not true, nothing happens.
 
 Example:
-
+```
 while the simulation is not finished:
     // A-phase
     take the next event from the event list
@@ -138,3 +132,4 @@ while the simulation is not finished:
         if needed, add new B-events to the event list
 
 end simulation
+```
