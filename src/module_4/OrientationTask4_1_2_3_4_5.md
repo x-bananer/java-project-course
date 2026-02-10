@@ -59,7 +59,7 @@ ___
 
 **4. (W) Write an algorithm in Java or pseudocode for the main loop of the simulator: The main loop does all the things required for a three-phase simulation (presented in a section). Think in general terms (don't think in detail) and present a general solution. No need for target system concepts.**
 
-*Implementation of an exchange order book model:*
+*Toteutetaan pörssin Order Book simulaation:*
 
 ```
 when an order arrives in the system:
@@ -105,15 +105,15 @@ ___
 
 **A-phase**
 
-The simulator looks at which event will happen next and moves the time directly to that moment.
+Simulaattori katsoo, mikä tapahtuma tapahtuu seuraavaksi, ja siirtää ajan suoraan siihen hetkeen.
 
 **B-events**
 
-These are events that are already planned for a specific time. For example, a customer arrives or a service execution finishes. At this stage the simulator just executes everything that must happen at the current time.
+Nämä ovat tapahtumia, jotka on jo suunniteltu tietylle ajalle. Esimerkiksi asiakas saapuu tai palvelu päättyy. Tässä vaiheessa simulaattori suorittaa kaikki tapahtumat, joiden pitää tapahtua tällä hetkellä.
 
 **C-events**
 
-These are conditional actions. They are done only if the situation is right. For example, if there is a person in the queue and a free operator, then service can start and the C-event is executed. If the condition is not true, nothing happens.
+Nämä ovat ehdollisia toimintoja. Ne tehdään vain, jos tilanne on sopiva. Esimerkiksi jos jonossa on asiakas ja palvelupiste on vapaa, palvelu voi alkaa ja C-tapahtuma suoritetaan. Jos ehto ei täyty, mitään ei tapahdu.
 
 Example:
 ```
